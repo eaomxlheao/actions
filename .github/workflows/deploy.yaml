@@ -15,3 +15,5 @@ jobs:
         run: echo "Generar binarios..."
       - name: Publicar website
         run: echo "Publicar website..."
+      - name: Enviar notificación
+        run: echo "Enviar notificación..."
