@@ -31,4 +31,5 @@ jobs:
         run: echo "Enviar correo electrónico..."
       - name: Desplegar variable de entorno
         run: echo "Pass vale ${{ env.pass }}" #Acceso a variable de entorno
-        
+      - name: Desplegar variable de entorno alternativo
+        run: echo "Pass vale $pass" #Acceso a variable de entorno
