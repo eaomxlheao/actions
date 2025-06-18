@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   actions:
-    name: Actions
+    name: actions
     outputs:
       salida: "Hola Actions"
     runs-on: ubuntu-latest
