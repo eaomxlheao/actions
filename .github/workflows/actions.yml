@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: mensaje
         id: mensaje
-        run: echo "mensaje=Hola MUndo" >> $GITHUB_OUTPUTS
+        run: echo "mensaje=Hola MUndo" >> $GITHUB_OUTPUT
       - name: Working directory
         run: ls -la
       - name: Checkout code
