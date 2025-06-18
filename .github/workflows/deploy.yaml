@@ -21,7 +21,7 @@ jobs:
         run: echo "Enviar notificación..."
   notifications: #Nombre del trabajo
     name: Notifications #Nombre del trabajo
-    depends-on: deploy #Dependencia del trabajo anterior
+    needs: deploy #Dependencia del trabajo anterior
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest #Máquina virtual donde se ejecutará el trabajo
     steps:
