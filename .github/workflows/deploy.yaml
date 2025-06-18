@@ -1,11 +1,13 @@
-name: Hola mundo
-on:
+name: Hola mundo #Nombre
+on: #Disparador, puede ser push, pull_request, etc.
   push:
     branches:
-      - main
+      - main #Rama a la que se le hará push
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  deploy: #Nombre del trabajo
+    name: Deploy #Nombre del trabajo
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' #Condición para ejecutar el trabajo
+    runs-on: ubuntu-latest #Máquina virtual donde se ejecutará el trabajo
     steps:
       - name: Checkout code
         run: echo "Checking out code..."
