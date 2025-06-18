@@ -1,0 +1,15 @@
+name: Strategy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  strategy:
+    name: Strategy
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        mesaje: [uno, dos, tres]
+    steps:
+      - name: Imprimir mensaje
+        run: echo "Running on ${{ matrix.mensaje }}"
