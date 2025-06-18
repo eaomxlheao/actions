@@ -38,7 +38,7 @@ jobs:
       - name: Crear un archivo
         run: echo "Este es un archivo de prueba" > archivo.txt
       - name: Subir el archivo como artefacto
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: archivo-prueba
           path: archivo.txt
