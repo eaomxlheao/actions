@@ -2,7 +2,7 @@ name: Hola mundo #Nombre
 on: #Disparador, puede ser push, pull_request, etc.
   push:
     branches:
-      - main #Rama a la que se le hará push
+      - actions #Rama a la que se le hará push
 jobs:
   deploy: #Nombre del trabajo
     name: Deploy #Nombre del trabajo

@@ -3,7 +3,7 @@ name: Actions
 on:
   push:
     branches:
-      - main
+      - actions
 jobs:
   actions:
     name: actions
