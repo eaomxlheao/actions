@@ -12,6 +12,6 @@ jobs:
       - name: Working directory
         run: ls -la
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2 #Autor/action@versión
       - name: Working directory
         run: ls -la
