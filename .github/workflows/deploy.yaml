@@ -22,8 +22,13 @@ jobs:
   notifications: #Nombre del trabajo
     name: Notifications #Nombre del trabajo
     needs: deploy #Dependencia del trabajo anterior
+    env:
+      pass: mococes #Variable de entorno
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest #Máquina virtual donde se ejecutará el trabajo
     steps:
       - name: Enviar correo electrónico
         run: echo "Enviar correo electrónico..."
+      - name: Desplegar variable de entorno
+        run: echo "Pass vale: ${{ env.pass }}" #Acceso a variable de entorno
+        
