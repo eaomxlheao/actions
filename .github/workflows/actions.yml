@@ -42,3 +42,16 @@ jobs:
         with:
           name: archivo-prueba
           path: archivo.txt
+  descargar:
+    name: Descargar artefacto
+    runs-on: ubuntu-latest
+    needs: artefacto
+    steps:
+      - name: Descargar artefacto
+        uses: actions/download-artifact@v4
+        with:
+          name: archivo-prueba
+      - name: Listar archivos descargados
+        run: ls -la
+      - name: Leer contenido del archivo
+        run: cat archivo.txt
