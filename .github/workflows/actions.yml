@@ -30,4 +30,4 @@ jobs:
       salida: ${{ needs.actions.outputs.salida }}
     steps:
       - name: Imprimiendo mensaje
-        run: echo "Mensaje desde el job mensajes: ${{ env.salida }}"
+        run: echo "Mensaje desde el job mensajes ${{ env.salida }}"
