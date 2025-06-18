@@ -7,6 +7,8 @@ on:
 jobs:
   actions:
     name: Actions
+    outputs:
+      salida: "Hola Actions"
     runs-on: ubuntu-latest
     steps:
       - name: mensaje
@@ -20,3 +22,12 @@ jobs:
         run: ls -la
       - name: Imprimiendo mensaje
         run: echo "Mensaje: ${{ steps.mensaje.outputs.mensaje }}"
+  mensajes:
+    name: Mensajes
+    runs-on: ubuntu-latest
+    needs: actions
+    env:
+      salida: ${{ needs.actions.outputs.salida }}
+    steps:
+      - name: Imprimiendo mensaje
+        run: echo "Mensaje desde el job mensajes: ${{ env.salida }}"
