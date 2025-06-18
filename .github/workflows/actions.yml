@@ -31,3 +31,14 @@ jobs:
     steps:
       - name: Imprimiendo mensaje
         run: echo "Mensaje desde el job mensajes ${{ env.salida }}"
+  artefacto:
+    name: artefacto
+    runs-on: ubuntu-latest
+    steps:
+      - name: Crear un archivo
+        run: echo "Este es un archivo de prueba" > archivo.txt
+      - name: Subir el archivo como artefacto
+        uses: actions/upload-artifact@v2
+        with:
+          name: archivo-prueba
+          path: archivo.txt
