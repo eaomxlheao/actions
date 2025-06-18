@@ -1,0 +1,17 @@
+name: Actions
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  actions:
+    name: Actions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Working directory
+        run: ls -la
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Working directory
+        run: ls -la
