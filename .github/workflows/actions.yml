@@ -15,13 +15,13 @@ jobs:
         id: mensaje
         run: echo "mensaje=Hola MUndo" >> $GITHUB_OUTPUTS
       - name: Working directory
-        run: ls -la        
+        run: ls -la
       - name: Checkout code
         uses: actions/checkout@v2 #Autor/action@versión
       - name: Working directory
         run: ls -la
       - name: Imprimiendo mensaje
-        run: echo "Mensaje: ${{ steps.mensaje.outputs.mensaje }}"
+        run: echo "Mensaje ${{ steps.mensaje.outputs.mensaje }}"
   mensajes:
     name: Mensajes
     runs-on: ubuntu-latest
