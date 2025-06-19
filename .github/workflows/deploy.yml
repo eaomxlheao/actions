@@ -4,8 +4,10 @@ on:
     branches:
       - clase3
 jobs:
-    first-job:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Print secret
-            run: echo "El secreto es ${{ secrets.REPO_SECRET }}"
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print secret
+        run: echo "El secreto es ${{ secrets.REPO_SECRET }}"
+      - name: Print variable
+        run: echo "La variable es ${{ vars.ENV_VAR }}"
